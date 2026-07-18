@@ -10,5 +10,13 @@ def hello():
 def health():
     return {"status": "ok"}
 
+@app.route("/info")
+def info():
+    return {
+        "name": "quakewatch-learning",
+        "version": "1.0.0",
+        "description": "Simple Flask application for DevOps course project"
+    }
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
