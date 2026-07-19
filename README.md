@@ -7,6 +7,7 @@ This project shows what I learned during the DevOps course and how I apply these
 
 - [Project Goal](#project-goal)
 - [Project Roadmap](#project-roadmap)
+- [Version History](#version-history)
 - [Project Structure](#project-structure)
 - [How It Works](#how-it-works)
 - [Application Endpoints](#application-endpoints)
@@ -47,6 +48,33 @@ The project covers tools and topics such as Docker, Docker Compose, Kubernetes, 
 - [ ] Create a Helm chart.
 - [ ] Add Git workflow documentation.
 - [ ] Add a Jenkins pipeline.
+
+
+## Version History
+
+### 1.0
+
+Initial Flask Docker application.
+
+- Created a simple Flask application.
+- Added `Dockerfile`.
+- Added `docker-compose.yml`.
+- Published the first Docker image.
+
+### 1.1
+
+Added basic application health check.
+
+- Added `/health` endpoint.
+
+### 1.2
+
+Updated application information and Docker Hub documentation.
+
+- Added `/info` endpoint.
+- Added `.dockerignore`.
+- Updated README with Docker Hub image tag `1.2`.
+- Added `Version History` section to document project changes.
 
 
 ## Project Structure
@@ -153,14 +181,14 @@ http://localhost:5000
 Pull the published image:
 
 ```bash
-docker pull stanislavsupanitsky/quakewatch-learning:phase1
+docker pull stanislavsupanitsky/quakewatch-learning:1.2
 ```
 
 
 Run the pulled image:
 
 ```bash
-docker run --rm --name quakewatch-app -p 5000:5000 stanislavsupanitsky/quakewatch-learning:phase1
+docker run --rm --name quakewatch-app -p 5000:5000 stanislavsupanitsky/quakewatch-learning:1.2
 ```
 
 
